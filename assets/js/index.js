@@ -23,22 +23,22 @@ const animalesJson = await cargarData.cargarAnimales();
         
             switch (animalSeleccionado) {
                 case 'Leon':
-                    animal = new Leon(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Leon(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
                 case 'Tigre':
-                    animal = new Tigre(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Tigre(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
                 case 'Oso':
-                    animal = new Oso(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Oso(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
                 case 'Serpiente':
-                    animal = new Serpiente(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Serpiente(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
                 case 'Aguila':
-                    animal = new Aguila(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Aguila(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
                 default:
-                    animal = new Animal(animalData.name, animalData.imagen, animalData.sonido, edadSeleccionada, comentario);
+                    animal = new Animal(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
             }
         
             const previewDiv = document.getElementById('preview');

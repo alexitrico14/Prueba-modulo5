@@ -2,28 +2,28 @@
   "animales": [
     {
       "name": "Leon",
-      "imagen": "./assets/imgs/Leon.png",
-      "sonido":"./assets/sounds/Rugido.mp3"
+      "imagen": "Leon.png",
+      "sonido":"Rugido.mp3"
     },
     {
       "name": "Lobo",
-      "imagen": "./assets/imgs/Lobo.jpg",
-      "sonido":"./assets/sounds/Aullido.mp3"
+      "imagen": "Lobo.jpg",
+      "sonido":"Aullido.mp3"
     },
     {
       "name": "Oso",
-      "imagen": "./assets/imgs/Oso.jpg",
-      "sonido":"./assets/sounds/Gruñido.mp3"
+      "imagen": "Oso.jpg",
+      "sonido":"Gruñido.mp3"
     },
     {
       "name": "Serpiente",
-      "imagen": "./assets/imgs/Serpiente.jpg",
-      "sonido":"./assets/sounds/Siseo.mp3"
+      "imagen": "Serpiente.jpg",
+      "sonido":"Siseo.mp3"
     },
     {
       "name": "Aguila",
-      "imagen": "./assets/imgs/Aguila.png",
-      "sonido":"./assets/sounds/Chillido.mp3"
+      "imagen": "Aguila.png",
+      "sonido":"Chillido.mp3"
     }
    
   ]
