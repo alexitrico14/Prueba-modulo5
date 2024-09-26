@@ -1,15 +1,36 @@
 // Clase base Animal
 class Animal {
   constructor(nombre, imagen, sonido, edad, comentarios) {
-      this.nombre = nombre;
-      this.imagen = imagen;
-      this.sonido = sonido;
-      this.edad = edad;
-      this.comentarios = comentarios;
+      this._nombre = nombre;
+      this._imagen = imagen;
+      this._sonido = sonido;
+      this._edad = edad;
+      this._comentarios = comentarios;
+  }
+
+  // Get
+  get nombre() {
+      return this._nombre;
+  }
+
+  get imagen() {
+      return this._imagen;
+  }
+
+  get sonido() {
+      return this._sonido;
+  }
+
+  get edad() {
+      return this._edad;
+  }
+
+  get comentarios() {
+      return this._comentarios;
   }
 
   reproducirSonido() {
-      const audio = new Audio(this.sonido);
+      const audio = new Audio(this._sonido);
       audio.play();
   }
 }
@@ -46,3 +67,4 @@ class Aguila extends Animal {
 }
 
 export { Animal, Leon, Tigre, Oso, Serpiente, Aguila };
+
