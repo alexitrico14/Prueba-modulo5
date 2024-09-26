@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../imgs/fondo.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 100px;
+}
+
+/* Formulario */
+
+#preview {
+  height: 200px;
+  background-image: url(../imgs/lion.svg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* Tabla */
+
+#Animales {
+  height: 100%;
+  background: #f0f0f0;
+}
+
+.participante {
+  max-width: 30%;
+}
+
+/* Modal */
+
+.modal-dialog {
+  max-width: 85% !important;
+}
+
+.modal-centered {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+/* Modificacion img modal */
+.img-modal {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Reset y style boton Sonido*/
+.btn-reset {
+  width: 100%;
+  padding: 0;
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+
+.btn-reset:hover {
+  background-color: #cc0000 !important;
+  border-color: #cc0000 !important;
+}
+
+.btn-reset:active:focus{
+  background-color: #990000 !important;
+  border-color: #990000 !important;
+}
