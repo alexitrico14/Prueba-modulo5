@@ -29,3 +29,24 @@ export function mostrarDetallesModal(animal) {
     const modal = new bootstrap.Modal(document.getElementById('animalModal'));
     modal.show();
 }
+
+export function resetFormulario() {
+
+    // Limpiar el div#preview pero mantener estilos
+    const previewDefault = document.getElementById('preview');
+    previewDefault.style.backgroundImage = '';  // Limpiar la imagen de fondo
+    previewDefault.style.backgroundSize = '';  // Mantener el tamaño de fondo
+    previewDefault.style.backgroundPosition = '';  // Mantener la posición
+
+    // Resetear el select de animal
+    const selectAnimal = document.getElementById('animal');
+    selectAnimal.selectedIndex = 0; // Regresar al placeholder "Seleccione un animal"
+    // Resetear el select de edad
+    const selectEdad = document.getElementById('edad');
+    selectEdad.selectedIndex = 0; // Regresar al placeholder "Seleccione un rango de años"
+
+    // Reiniciar cualquier otro input o textarea si es necesario
+    document.getElementById('comentarios').value = ''; // Limpiar el campo de comentarios
+
+    
+}
