@@ -1,4 +1,4 @@
-import { Animal, Leon, Tigre, Oso, Serpiente, Aguila } from './modulos/class.js';
+import { Animal, Leon, Tigre, Oso, Serpiente, Aguila, Pablito } from './modulos/class.js';
 import { actualizarPreview, crearTarjetaAnimal, mostrarDetallesModal } from './modulos/dom.js';
 import { cargarData } from './modulos/data.js';
 const animalesJson = await cargarData.cargarAnimales();
@@ -37,11 +37,15 @@ const animalesJson = await cargarData.cargarAnimales();
                 case 'Aguila':
                     animal = new Aguila(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
                     break;
+                case 'Pablito':
+                    animal = new Pablito(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
+                    break;
                 default:
                     animal = new Animal(animalData.name, animalData.imagen, `./assets/sounds/${animalData.sonido}`, edadSeleccionada, comentario);
             }
         
             const previewDiv = document.getElementById('preview');
+
             actualizarPreview(previewDiv, animal.imagen);
         
             const contenedorAnimales = document.getElementById('Animales');
@@ -57,5 +61,27 @@ const animalesJson = await cargarData.cargarAnimales();
             console.error('Error:', error);
         }
     }
+
+
+    document.getElementById('animal').addEventListener('change', async function () {
+        try {
+            const data = await cargarData.cargarAnimales();
+            const animales = data.animales;
+    
+            const animalSeleccionado = this.value;
+    
+            const animalData = data.find(a => a.name === animalSeleccionado);
+    
+            if (!animalData) {
+                throw new Error('Animal no encontrado');
+            }
+    
+            const previewDiv = document.getElementById('preview');
+            actualizarPreview(previewDiv, animalData.imagen);
+    
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
 
 document.getElementById('btnRegistrar').addEventListener('click', registrarAnimal);

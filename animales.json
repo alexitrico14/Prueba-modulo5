@@ -24,6 +24,11 @@
       "name": "Aguila",
       "imagen": "Aguila.png",
       "sonido":"Chillido.mp3"
+    },
+    {
+      "name": "Pablito",
+      "imagen": "pablito.jpg",
+      "sonido": "pablito.mp3"
     }
    
   ]

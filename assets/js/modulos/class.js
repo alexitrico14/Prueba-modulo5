@@ -66,5 +66,11 @@ class Aguila extends Animal {
   }
 }
 
-export { Animal, Leon, Tigre, Oso, Serpiente, Aguila };
+class Pablito extends Animal {
+  constructor(nombre, imagen, sonido, edad, comentarios) {
+      super(nombre, imagen, sonido, edad, comentarios);
+  }
+}
+
+export { Animal, Leon, Tigre, Oso, Serpiente, Aguila, Pablito };
 
