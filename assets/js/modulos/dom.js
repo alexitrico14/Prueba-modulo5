@@ -32,21 +32,17 @@ export function mostrarDetallesModal(animal) {
 
 export function resetFormulario() {
 
-    // Limpiar el div#preview pero mantener estilos
     const previewDefault = document.getElementById('preview');
-    previewDefault.style.backgroundImage = '';  // Limpiar la imagen de fondo
-    previewDefault.style.backgroundSize = '';  // Mantener el tamaño de fondo
-    previewDefault.style.backgroundPosition = '';  // Mantener la posición
+    previewDefault.style.backgroundImage = '';
+    previewDefault.style.backgroundSize = ''; 
+    previewDefault.style.backgroundPosition = '';
 
-    // Resetear el select de animal
     const selectAnimal = document.getElementById('animal');
-    selectAnimal.selectedIndex = 0; // Regresar al placeholder "Seleccione un animal"
-    // Resetear el select de edad
+    selectAnimal.selectedIndex = 0;
     const selectEdad = document.getElementById('edad');
-    selectEdad.selectedIndex = 0; // Regresar al placeholder "Seleccione un rango de años"
+    selectEdad.selectedIndex = 0;
 
-    // Reiniciar cualquier otro input o textarea si es necesario
-    document.getElementById('comentarios').value = ''; // Limpiar el campo de comentarios
+    document.getElementById('comentarios').value = '';
 
     
 }
